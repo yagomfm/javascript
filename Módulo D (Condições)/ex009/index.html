@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condições</title>
+    <style>
+        code {
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Condições</h1>
+    <h2>Condição Simples:</h2>
+    <pre>
+    <code>
+        if (condição) {
+            bloco true
+        } else {
+            bloco false
+        }
+    </code>
+    <code>
+        var vel = 64
+        console.log(`A velocidade do seu carro é ${vel}km/h.`)
+        if (vel > 60) {
+        console.log('Você ultrapassou a velocidade permitida! MULTADO!')
+        }
+        console.log('Dirija sempre usando cinto de segurança.')
+    </code>
+    <code>
+        var pais = 'Brasil'
+        console.log(`Vivendo em ${pais}`)
+        if (pais != `Brasil`) {
+            console.log()
+        } else {
+            console.log('Você é brasileiro!')
+        }
+    </code>
+    </pre>
+
+    <h2>Sistema de multas</h2>
+    Velocidade do carro: <input type="number" name="txtvel" id="txtvel"> km/h
+    <input type="button" value="Verificar" onclick="calcular()">
+    <div id="res">
+
+    </div>
+    <script>
+        function calcular() {
+            var txtv = document.getElementById('txtvel')
+            var res = document.getElementById('res')
+            var vel = Number(txtv.value)
+
+            res.innerHTML = `<p>Sua velocidade atual é de <strong>${vel}km/h</strong>.</p>`
+            if (vel > 60) {
+                res.innerHTML += `<p>Você está <strong>MULTADO</strong> por excesso de velocidade!</p>`
+            }
+            res.innerHTML += `<p>Dirija sempre com cinto de segurança!</p>`
+        }
+    </script>
+</body>
+</html>

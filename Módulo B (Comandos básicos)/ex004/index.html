@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            font: normal 20px Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Formatando strings e números</h1>
+    <h2>Strings:</h2>
+    <ul>
+        <li> s.length -> quantos caracteres a string tem
+        <li> s.toUpperCase() -> tudo para maiuscula
+        <li> s.toLowerCase() -> tudo para minuscula
+    </ul>
+    <script>
+
+        var nome = window.prompt('Qual é o seu nome?')
+        document.write(`Olá, ${nome}! Seu nome tem ${nome.length} letras.<br>`)
+        document.write(`Seu nome em  maiúsculas é ${nome.toUpperCase()}.<br>`)
+        document.write(`Seu nome em  inúsculas é ${nome.toLowerCase()}.`)
+
+    </script>
+    <h2>Números:</h2>
+    <ul>
+        <li> n.toFixed() -> Configura número de casas decimais
+        <li> n.toFixed().replace('', '') -> Altera um elemento para outro
+        <li> n.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'}) -> Altera o valor monetário do número
+    </ul>
+    <script>
+
+        var num = Number(window.prompt('Digite um número: '))
+        document.write(`Seu número é ${num.toFixed(2)}.<br>`)
+        document.write(`Seu número é ${num.toFixed(2).replace('.', ',')}.<br>`)
+        document.write(`Seu número é ${num.toLocaleString('pt-BR', {style: 'currency', currency: 'BRL'})}.`)
+
+    </script>
+</body>
+</html>

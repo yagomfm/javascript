@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Primeiros passos com o DOM</title>
+    <style>
+        body {
+            background-color: skyblue;
+            color: white;
+            font: normal 18pt Arial;
+            line-height: 1.5em;
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando estudos com o DOM</h1>
+    <!-- DOM = Document Object Model -->
+    <p>É um facilitador para dar acesso as elementos do nosso site</p>
+    <p>Aqui vai o resultado</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    <div id="msg">Clique em mim</div>
+    <h2>Exemplo de árvore DOM</h2>
+    <pre>
+                        window
+            location | document | history
+                         html
+                     head | body
+                meta | title h1 | p | div
+                                strong
+    </pre>
+    <p>Selecionando elementos no DOM:</p>
+    <ul>
+        <li> por Marca
+            <ul>
+                <li> getElementsByTagName()
+            </ul>
+        <li> por ID
+            <ul>
+                <li> getElementsByID()
+            </ul>
+        <li> por Nome
+            <ul>
+                <li> getElementsByName()
+            </ul>
+        <li> por Classe
+            <ul>
+                <li> getElementsByClassName()
+            </ul>
+        <li> por Seletor
+            <ul>
+                <li> querySelector()
+                <li> querySelectorAll()
+            </ul>
+    </ul>
+
+    <script class="code">
+        var corpo = window.document.body
+        var p1 = window.document.getElementsByTagName('p')[1]
+        
+        /*
+        var d = window.document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Estou aguardando...'
+        window.document.getElementById('msg').innerText= 'Estou aguardando...'
+        */
+        /*
+        var d = window.document.getElementsByName('msg')[0]
+        d.innerText = 'Olá'
+        */
+        var d = document.querySelector('div#msg')
+        d.style.background = 'blue'
+    </script>
+</body>
+</html>
